@@ -867,6 +867,13 @@ LogColors = ""
 #        You can bypass this setting by typing "/script SetAllowLowLevelRaid(true/false)" command in chat
 #        Default: 10
 #
+#    Raid.BoostedXp = 0
+#        Should raid groups receive boosted experience, instead of a raid penalty.
+#        The default formula is "max(1 - players_in_raid_group * 0.05, 0.01)"
+#        Setting it to true, changes the formula to "0.1 * players_in_raid_group + 0.9".
+#        Default: 0 (Xp penalty for each additional raid member)
+#                 1 (Xp bonus for each additional raid member)
+#
 #    PlayerCommands
 #        Should player chat be parsed for GM commands.
 #        Default: 1 (parse commands)
@@ -954,6 +961,7 @@ ShowProgressBars = 0
 WaitAtStartupError = 0
 Motd = "Welcome to the Continued Massive Network Game Object Server."
 Raid.MinLevel = 10
+Raid.BoostedXp = 0
 PlayerCommands = 1
 
 ###################################################################################################################

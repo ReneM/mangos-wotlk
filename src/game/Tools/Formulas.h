@@ -170,7 +170,9 @@ namespace MaNGOS
                 case 5:
                     return 1.4f;
                 default:
-                    return std::max(1.f - count * 0.05f, 0.01f);
+                    float raid_default_ratio = std::max(1.f - count * 0.05f, 0.01f);
+                    float raid_boosted_ratio = (0.1f * count + 0.9f); //1.5 for 6 players, 1.6 for 7 players and so on.
+                    return sWorld.getConfig(CONFIG_BOOL_RAID_BOOSTED_XP) ? raid_boosted_ratio : raid_default_ratio;
             }
         }
     }

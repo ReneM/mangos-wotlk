@@ -815,6 +815,8 @@ void World::LoadConfigSettings(bool reload)
 
     setConfig(CONFIG_BOOL_AUTO_DOWNRANK,              "AutoDownrank", true);
 
+    setConfig(CONFIG_BOOL_RAID_BOOSTED_XP, "Raid.BoostedXp", false);
+
     m_relocation_ai_notify_delay = sConfig.GetIntDefault("Visibility.AIRelocationNotifyDelay", 1000u);
     m_relocation_lower_limit_sq = pow(sConfig.GetFloatDefault("Visibility.RelocationLowerLimit", 10), 2);
 
